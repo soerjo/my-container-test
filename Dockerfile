@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN echo $NEXT_PUBLIC_ANALYTICS_ID   # <-- ini gak bakal muncul nilainya saat build image
+ENV NEXT_PUBLIC_ANALYTICS_ID=$NEXT_PUBLIC_ANALYTICS_ID
 
 RUN npm run build
 
