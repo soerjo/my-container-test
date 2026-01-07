@@ -1,0 +1,15 @@
+services:
+  nextjs-app:
+    build: .
+    ports: 
+      - "3000:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      ANOTHER_VAR: ${ANOTHER_VAR}
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
