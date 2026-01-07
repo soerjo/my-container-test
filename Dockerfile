@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+RUN echo $NEXT_PUBLIC_ANALYTICS_ID   # <-- ini gak bakal muncul nilainya saat build image
+
 RUN npm run build
 
 # Stage 2: production stage
