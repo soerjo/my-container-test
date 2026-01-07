@@ -4,8 +4,8 @@ services:
       context: .
       args:
         NEXT_PUBLIC_ANALYTICS_ID: ${NEXT_PUBLIC_ANALYTICS_ID}    
-    # ports: 
-    #   - "3000:3000"
+    ports: 
+      - "3000:3000"
     environment:
       NODE_ENV: ${NODE_ENV}
       NEXT_PUBLIC_ANALYTICS_ID: ${NEXT_PUBLIC_ANALYTICS_ID}
