@@ -5,7 +5,7 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: ${NODE_ENV}
-      ANOTHER_VAR: ${ANOTHER_VAR}
+      NEXT_PUBLIC_ANALYTICS_ID: ${NEXT_PUBLIC_ANALYTICS_ID}
     restart: unless-stopped
     networks:
       - proxy
